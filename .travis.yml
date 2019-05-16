@@ -1,0 +1,21 @@
+sudo: false
+language: ruby
+env:
+  global:
+  - GH_REF: github.com/NashMiao/ontology-python-sdk-docs.git
+  - secure: cotyVK0PDwxyNsGAunXJgOWMYOG0ek3f6pArkz3IwU0h2l3XmnyGcGhUai4vmwRWf1gYxsnsKBkLba9T76AxN2Ve99EPcgwrJCvtDN88NXE0YvYPIFMytZE5UDSbIrE0XRNAYZz7oNzIUIy+C8Al/E72DvXf4TmdrXYPYmBMQR8qXFAy0gNv/hKaUTYk172A8Ccrt35JQZPoXPSPXdkGjKG4gdqCu6OhrpV0Hd4hPT0IsyIKuyMhyhsywXs77cdO+whb61zKnarl4BsYEbjmuTQFn+DBpMAJeuQNQhBLBzmSl1b36N5/9fL3SZr7vnDZQE2NF9cI106ivM9Bq0rjcZ5zVmtar+RuFpTp1hMIkUZiqpFMAAM+l14UCOXux+Cl0N2aoLPpIIAhxfS6NlTgClHpSU3nGxNLEHUlzJH/3bEzIxUMP4EvZxdFUCWQr1pPGP5YUjw2eMsZiTck9zElNoTpyfdLi6zkotxhrXO+Vv62Su3OwI4PMLgjsHiDXJapzvqdcY/pQupD38JRFUGoHZIaFcmxF0eB/3qjmxItoyRLB9fOGqShvXrGYq3tSu4DQmhguNALHLbVHtFIghJWK4SiguUraCZ4mJFXnyt63finXNZGr82s2uHiHibubmgfeUjIlJ87NERoQdGT0TEJJjBwRy1QGkqrXfDWW46O/Mc=
+rvm:
+- 2.4.0
+cache: bundler
+before_script:
+- git clone https://${GH_TOKEN}@${GH_REF} -b gh-pages --depth=1 build
+script:
+- bundle exec middleman build --clean
+after_script:
+- cd ./build
+- git add .
+- git config user.name "travis-bot"
+- git config user.email "wdx7266@vip.qq.com"
+- git add .
+- git commit -m "update page automatically"
+- git push "https://${GH_TOKEN}@${GH_REF}"
