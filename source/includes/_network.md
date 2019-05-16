@@ -1,3 +1,3 @@
 # Network
 
-This is an API set that allows you to interact with an Ontology nodes.
+This module contains functions help you to interact with an Ontology nodes by RPC, RESTful or WebSocket.
