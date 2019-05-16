@@ -13,7 +13,6 @@ script:
 - bundle exec middleman build --clean
 after_script:
 - cd ./build
-- git add .
 - git config user.name "travis-bot"
 - git config user.email "wdx7266@vip.qq.com"
 - git add .

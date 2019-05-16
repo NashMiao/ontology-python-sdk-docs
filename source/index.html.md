@@ -25,6 +25,12 @@ includes:
 - native-contract-ong
 - native-contract-ontid
 - neo-contract
+- neo-contract-oep4
+- neo-contract-oep5
+- neo-contract-oep8
+- neo-contract-aio-oep4
+- neo-contract-aio-oep5
+- neo-contract-aio-oep8
 
 search: true
 ---
