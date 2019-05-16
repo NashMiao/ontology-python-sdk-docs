@@ -442,37 +442,37 @@
                     <a href="#async-oep-4" class="toc-h2 toc-link" data-title="Async OEP-4">Async OEP-4</a>
                         <ul class="toc-list-h3">
                             <li>
-                              <a href="#name-2" class="toc-h3 toc-link" data-title="name">name</a>
+                              <a href="#name" class="toc-h3 toc-link" data-title="name">name</a>
                             </li>
                             <li>
-                              <a href="#symbol-2" class="toc-h3 toc-link" data-title="symbol">symbol</a>
+                              <a href="#symbol" class="toc-h3 toc-link" data-title="symbol">symbol</a>
                             </li>
                             <li>
-                              <a href="#decimals-2" class="toc-h3 toc-link" data-title="decimals">decimals</a>
+                              <a href="#decimals" class="toc-h3 toc-link" data-title="decimals">decimals</a>
                             </li>
                             <li>
-                              <a href="#total-supply-2" class="toc-h3 toc-link" data-title="total supply">total supply</a>
+                              <a href="#total-supply" class="toc-h3 toc-link" data-title="total supply">total supply</a>
                             </li>
                             <li>
-                              <a href="#balance-of-2" class="toc-h3 toc-link" data-title="balance of">balance of</a>
+                              <a href="#balance-of" class="toc-h3 toc-link" data-title="balance of">balance of</a>
                             </li>
                             <li>
-                              <a href="#init-2" class="toc-h3 toc-link" data-title="init">init</a>
+                              <a href="#init" class="toc-h3 toc-link" data-title="init">init</a>
                             </li>
                             <li>
-                              <a href="#transfer-2" class="toc-h3 toc-link" data-title="transfer">transfer</a>
+                              <a href="#transfer" class="toc-h3 toc-link" data-title="transfer">transfer</a>
                             </li>
                             <li>
-                              <a href="#transfer-multi-2" class="toc-h3 toc-link" data-title="transfer multi">transfer multi</a>
+                              <a href="#transfer-multi" class="toc-h3 toc-link" data-title="transfer multi">transfer multi</a>
                             </li>
                             <li>
-                              <a href="#approve-2" class="toc-h3 toc-link" data-title="approve">approve</a>
+                              <a href="#approve" class="toc-h3 toc-link" data-title="approve">approve</a>
                             </li>
                             <li>
-                              <a href="#allowance-2" class="toc-h3 toc-link" data-title="allowance">allowance</a>
+                              <a href="#allowance" class="toc-h3 toc-link" data-title="allowance">allowance</a>
                             </li>
                             <li>
-                              <a href="#transfer-from-2" class="toc-h3 toc-link" data-title="transfer from">transfer from</a>
+                              <a href="#transfer-from" class="toc-h3 toc-link" data-title="transfer from">transfer from</a>
                             </li>
                         </ul>
                   </li>
@@ -1015,7 +1015,7 @@ Coming soon.
 <aside class="warning">
 This package has <strong>NOT</strong> been audited and might potentially be unsafe. Take precautions to clear memory properly, store the private keys safely, and test transaction receiving and sending functionality properly before using in production!
 </aside>
-<h3 id='name-2'>name</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='name'>name</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1023,7 +1023,7 @@ This package has <strong>NOT</strong> been audited and might potentially be unsa
 <span class="n">token_name</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
 </code></pre>
 <p>Returns the name of the token asynchronously.</p>
-<h3 id='symbol-2'>symbol</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='symbol'>symbol</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1031,7 +1031,7 @@ This package has <strong>NOT</strong> been audited and might potentially be unsa
 <span class="n">token_symbol</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">symbol</span><span class="p">()</span>
 </code></pre>
 <p>Returns the symbol of the token asynchronously.</p>
-<h3 id='decimals-2'>decimals</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='decimals'>decimals</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1043,7 +1043,7 @@ This package has <strong>NOT</strong> been audited and might potentially be unsa
 <aside class="success">
 E.g. 9, means to divide the token amount by 1000000000 to get its user representation.
 </aside>
-<h3 id='total-supply-2'>total supply</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='total-supply'>total supply</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1051,7 +1051,7 @@ E.g. 9, means to divide the token amount by 1000000000 to get its user represent
 <span class="n">supply</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">total_supply</span><span class="p">()</span>
 </code></pre>
 <p>Returns the total token supply asynchronously.</p>
-<h3 id='balance-of-2'>balance of</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='balance-of'>balance of</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1059,7 +1059,7 @@ E.g. 9, means to divide the token amount by 1000000000 to get its user represent
 <span class="n">balance</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">balance_of</span><span class="p">(</span><span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span><span class="p">)</span>
 </code></pre>
 <p>Returns the account balance of another account with owner address asynchronously.</p>
-<h3 id='init-2'>init</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='init'>init</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1069,7 +1069,7 @@ E.g. 9, means to divide the token amount by 1000000000 to get its user represent
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">founder</span><span class="p">,</span> <span class="n">payer</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
 </code></pre>
 <p>Contract owner uses this interface to activate oep-4 token asynchronously.</p>
-<h3 id='transfer-2'>transfer</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='transfer'>transfer</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1083,7 +1083,7 @@ E.g. 9, means to divide the token amount by 1000000000 to get its user represent
 <aside class="success">
 If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
 </aside>
-<h3 id='transfer-multi-2'>transfer multi</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='transfer-multi'>transfer multi</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1098,7 +1098,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 <aside class="success">
 If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
 </aside>
-<h3 id='approve-2'>approve</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='approve'>approve</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1116,7 +1116,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Appr
 <aside class="notice">
 If this function is called again it overwrites the current allowance with amount value.
 </aside>
-<h3 id='allowance-2'>allowance</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='allowance'>allowance</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
@@ -1126,7 +1126,7 @@ If this function is called again it overwrites the current allowance with amount
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="n">await</span> <span class="n">oep4</span><span class="o">.</span><span class="n">approve</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
 </code></pre>
 <p>Returns the amount which spender is still allowed to withdraw from owner asynchronously.</p>
-<h3 id='transfer-from-2'>transfer from</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+<h3 id='transfer-from'>transfer from</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
