@@ -3,7 +3,7 @@ language: ruby
 env:
   global:
   - GH_REF: github.com/NashMiao/ontology-python-sdk-docs.git
-  - secure: ghV7GsiBDt24inNeZ/BVOWoG1NAGYzEyzi8hpq3kHvtEOMjS9XrUXZhhKO9wprAw2t7EH/gjfJnwv0dkTt+sSOv9bYH5NYxE5cM2JO5GC4RlX16GNHus5UbiR6DHm3TztxbuiV9W3+Dri+NM8bUam0CUERcMljoGUyCwwQPnRt3998M5Yt5h0DhoErVqK7EyMOzLe3jbtRKMxQggImLPTauBxPEFnez7B/sIVBQ3UMhSANV45Ta90XdaLkMA7XmlE76QO6iBStCW3svuuDpyl1GyHAK9vYHm5ORmyVwyCaA6ySIK74vxDHztyau+cT37ywfgQESc0TDs7+qVhZ8fZCp3iwcJLdtbEBrdhVSwVjUlaVuD0zOnxSvDK6nbPtXjLUV6Xc0pa6Hyz91en8zYBOlK1o+FIl5o3ywJBkYxxfSe6gc7V9M/kcwJ+Qr4xpIQeYCweylTJMnz3J8XXm/pgVklYJADziH4NAbQ6dQxlJne0CMffm9muqMbkcYd3ctxgM7tdwuBKAlXrL4Xxtqysc8JUXdcN4IZ3vw2mxnbMGCKYIcS5MvVzsEucCrEmAZK2Ec0ElhuyI25lzXfIkG4ZVTGPX2r2PhhEawUY+7aQPPVxN4Kcwmu6zdy2BA/FPcDSE6XuvKtdJC2dtCaKv9OLTrizHL/5+EATECNWsbQWd0=
+  - secure: f/HAaX1kaw25du3nj2Lqo2+4P7YNo7jIqMDXC2XTAYdTMpXgZwo66zH8O0zi4TMQBG6FjtVX1/reTKioMKTV3MG65n5U/OvvLqfD3MpQAPA00QvVOJAmPF6sJT5J9aspph9v6uLRBe+8CRqrdFI+STq74SJVHMzUFVjpnitpJfua5+Ni8EWZiZXsr+EFo7MuF7UYQ1/lOoCYq9NUsqWek5fjC9ZhjZknsNv64zGjXZbkNNnCdx4Wxms1I97wjaV+gimrBSGCBEord7Kc97WqWaIQqHRqFnqWDFlcxj9/cds7roXzik9gZOGEb/83HEVwThKLhp1v6xtPc9OgJiP7u34DJ9nYtjfbke/+SBXmnomly4deLnY+zNhp7bsoIt7JIRr3yx4pdFKtIbi0ZkqSgUazjbIAlo8FGCr938rlRb5qD4v6TDYy8f+DTJSgXrlLacJzEufVluPZrUmD4gGgowOv78dZPRUW/SBcXBkvcMEUnYGQpKWhr2uVBpfJixresgidp4lETgH9aRHkHvoF6i2y1XXcOdet6R5kEqYSzawtf28mdVF89AMjZNwhSZhgbYdcTOtFbQg18ZbQ03OEba1YDo6sJJIB1qdGrJa3VP7ShcP/T4H9yNRKNdRf9zUidSe4Ilfkulwk4EF2bCtf5oXHBObahQ0ytq16pZh6eKA=
 rvm:
 - 2.4.0
 branches:
@@ -11,15 +11,13 @@ branches:
   - master
 cache: bundler
 before_script:
+- git config --global user.name "travis-bot"
+- git config --global user.email "wdx7266@vip.qq.com"
 - git clone https://${GH_TOKEN}@${GH_REF} -b gh-pages --depth=1 build
 script:
 - bundle exec middleman build --clean
 after_script:
 - cd ./build
-- ls
-- git remote -v
-- git config user.name "travis-bot"
-- git config user.email "wdx7266@vip.qq.com"
 - git add .
 - git commit -m "update page automatically"
 - git push
