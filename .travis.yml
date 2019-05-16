@@ -5,7 +5,10 @@ env:
   - GH_REF: github.com/NashMiao/ontology-python-sdk-docs.git
   - secure: IqR2KB/UZkv90ryP0StqGf2wfXT5kI76ZXgqaNckRu4gk1TelXUC7tYkGYxUJc44Y5gs2TUkjXDyMZW0ePXNixkC2Zi99veL0ILzEdLYW8H/HlERLDGdaakq6dsVcb/xQivJv5sfRCKlVBzrij0VjJS1dS19vRCNMqPddgeeOF5Ux0m0/Lz4m8OSXoDdLgkubl9An87zQQAfJlMYjS4gTfuBcjoO/QyY0L0Po1DIkrz/zAJfbNWwsyQBQlLGkjo8bjl48sDRER6rb/z3YTBzrPYljInAigKpqiLteHgxrX+zsVfpJED8pdQHOBGy0MTuIvj+8Vx4l0KbaLPO5Mq2hfXojc7vIHF18caPQy/+lGOoZeqWSt96AyJ1nIMLHC/h9bILkPB3Rtmj/0Y+NpVjL4HEIHOgM/08LOnQv9qMRuOl7PNKckJ/DkUPu/50BbkUyVq0iT6oFztqy+o/tjL8TFLVT5SraTduK0YginzTs44045AwLrnEE6iWQ4yjEjZELMZGztJPMGLtictV4W3HDRuu25EjchpqLYiBTX0n1bkxQ5kyutWTKywVG5ujQH0tP/fH00Jswr4aWJzsKWSV1zOxCQist8uJdIeQj8r8CTQIl3Vhrf4jfpoCBUj5N/XHXApL4cRxyySvJHofBspYJ+IywKK1Pthel/fh/yqUfcE=
 rvm:
-- 2.4.0
+  - 2.4.0
+branches:
+  only:
+    - master
 cache: bundler
 before_script:
 - git clone https://${GH_TOKEN}@${GH_REF} -b gh-pages --depth=1 build
