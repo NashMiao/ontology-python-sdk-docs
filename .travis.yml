@@ -17,4 +17,4 @@ after_script:
 - git config user.email "wdx7266@vip.qq.com"
 - git add .
 - git commit -m "update page automatically"
-- git push "https://${GH_TOKEN}@${GH_REF}"
+- git push
