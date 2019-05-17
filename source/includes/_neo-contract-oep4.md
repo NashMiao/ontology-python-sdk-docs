@@ -152,11 +152,9 @@ If this function is called again it overwrites the current allowance with amount
 from ontology.ont_sdk import OntologySdk
 
 sdk = OntologySdk()
-contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
-oep4 = sdk.neo_vm.oep4(contract_address)
-owner = sdk.wallet_manager.create_account('password')
+owner = 'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'
 spender = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
-tx_hash = oep4.approve(owner, spender, 10, owner, 500, 20000)
+tx_hash = oep4.allowance(owner, spender)
 ```
 
 Returns the amount which spender is still allowed to withdraw from owner.
@@ -169,6 +167,7 @@ from ontology.ont_sdk import OntologySdk
 sdk = OntologySdk()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.oep4(contract_address)
+spender = sdk.wallet_manager.create_account('password')
 owner = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
 to_address = spender.get_address_base58()
 tx_hash = oep4.transfer_from(spender, owner, to_address, 1, acct1, 500, 20000)
