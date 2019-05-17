@@ -353,6 +353,21 @@
                             <li>
                               <a href="#decimals" class="toc-h3 toc-link" data-title="decimals">decimals</a>
                             </li>
+                            <li>
+                              <a href="#balance-of" class="toc-h3 toc-link" data-title="balance of">balance of</a>
+                            </li>
+                            <li>
+                              <a href="#transfer" class="toc-h3 toc-link" data-title="transfer">transfer</a>
+                            </li>
+                            <li>
+                              <a href="#approve" class="toc-h3 toc-link" data-title="approve">approve</a>
+                            </li>
+                            <li>
+                              <a href="#allowance" class="toc-h3 toc-link" data-title="allowance">allowance</a>
+                            </li>
+                            <li>
+                              <a href="#transfer-from" class="toc-h3 toc-link" data-title="transfer from">transfer from</a>
+                            </li>
                         </ul>
                   </li>
                   <li>
@@ -368,7 +383,22 @@
                               <a href="#decimals" class="toc-h3 toc-link" data-title="decimals">decimals</a>
                             </li>
                             <li>
+                              <a href="#balance-of" class="toc-h3 toc-link" data-title="balance of">balance of</a>
+                            </li>
+                            <li>
                               <a href="#unbound" class="toc-h3 toc-link" data-title="unbound">unbound</a>
+                            </li>
+                            <li>
+                              <a href="#transfer" class="toc-h3 toc-link" data-title="transfer">transfer</a>
+                            </li>
+                            <li>
+                              <a href="#approve" class="toc-h3 toc-link" data-title="approve">approve</a>
+                            </li>
+                            <li>
+                              <a href="#allowance" class="toc-h3 toc-link" data-title="allowance">allowance</a>
+                            </li>
+                            <li>
+                              <a href="#transfer-from" class="toc-h3 toc-link" data-title="transfer from">transfer from</a>
                             </li>
                         </ul>
                   </li>
@@ -790,22 +820,77 @@ Ontology uses a dual token (ONT and ONG) model. ONT is the coin and can be used 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">token_name</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to get the name of the token synchronously.</p>
+<p>Returns the name of the token synchronously.</p>
 <h3 id='symbol'>symbol</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">token_symbol</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">symbol</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to get the symbol of the token synchronously.</p>
+<p>Returns the symbol of the token synchronously.</p>
 <h3 id='decimals'>decimals</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">decimals</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">decimals</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to the number of decimals the token uses synchronously.</p>
+<p>Returns the number of decimals the token uses synchronously.</p>
 
 <aside class="success">
 The decimals of ONT is 0, which means to divide the token amount by 1 to get its user representation.
+</aside>
+<h3 id='balance-of'>balance of</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">balance</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">balance_of</span><span class="p">(</span><span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span><span class="p">)</span>
+</code></pre>
+<p>Returns the account balance of another account with owner address synchronously.</p>
+<h3 id='transfer'>transfer</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">from_acct</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">to_address</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">from_acct</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">from_acct</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Transfers amount of tokens to to_address synchronously.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
+</aside>
+<h3 id='approve'>approve</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">approve</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Allows spender to withdraw from owner account multiple times, up to the value amount.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Approval event.
+</aside>
+
+<aside class="notice">
+If this function is called again it overwrites the current allowance with amount value.
+</aside>
+<h3 id='allowance'>allowance</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="s">'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">allowance</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">)</span>
+</code></pre>
+<p>Returns the amount which spender is still allowed to withdraw from owner.</p>
+<h3 id='transfer-from'>transfer from</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">to_address</span> <span class="o">=</span> <span class="n">spender</span><span class="o">.</span><span class="n">get_address_base58</span><span class="p">()</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ont</span><span class="p">()</span><span class="o">.</span><span class="n">transfer_from</span><span class="p">(</span><span class="n">spender</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">acct1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Transfers value amount of tokens from address owner to address to_address.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
 </aside>
 <h2 id='ong'>ONG</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -822,23 +907,29 @@ Ontology uses a dual token (ONT and ONG) model. ONG is the utility token used fo
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">token_name</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to get the name of the token synchronously.</p>
+<p>Returns the name of the token synchronously.</p>
 <h3 id='symbol'>symbol</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">token_symbol</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">symbol</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to get the symbol of the token synchronously.</p>
+<p>Returns the symbol of the token synchronously.</p>
 <h3 id='decimals'>decimals</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">decimals</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">decimals</span><span class="p">()</span>
 </code></pre>
-<p>This interface is used to the number of decimals the token uses synchronously.</p>
+<p>Returns the number of decimals the token uses synchronously.</p>
 
 <aside class="success">
 The decimals of ONG is 9, which means to divide the token amount by 1000000000 to get its user representation.
 </aside>
+<h3 id='balance-of'>balance of</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">balance</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">balance_of</span><span class="p">(</span><span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span><span class="p">)</span>
+</code></pre>
+<p>Returns the account balance of another account with owner address synchronously.</p>
 <h3 id='unbound'>unbound</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
@@ -850,6 +941,55 @@ The decimals of ONG is 9, which means to divide the token amount by 1000000000 t
 
 <aside class="success">
 Claimable ONG is the amount of ONG you can claim for a 0.01 ONG fee. This balance will update each time an ONT transaction is made in your wallet address.
+</aside>
+<h3 id='transfer'>transfer</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">from_acct</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">to_address</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">from_acct</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">from_acct</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Transfers amount of tokens to to_address synchronously.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
+</aside>
+<h3 id='approve'>approve</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">approve</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Allows spender to withdraw from owner account multiple times, up to the value amount.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Approval event.
+</aside>
+
+<aside class="notice">
+If this function is called again it overwrites the current allowance with amount value.
+</aside>
+<h3 id='allowance'>allowance</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="s">'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">allowance</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">)</span>
+</code></pre>
+<p>Returns the amount which spender is still allowed to withdraw from owner.</p>
+<h3 id='transfer-from'>transfer from</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
+<span class="n">to_address</span> <span class="o">=</span> <span class="n">spender</span><span class="o">.</span><span class="n">get_address_base58</span><span class="p">()</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">native_vm</span><span class="o">.</span><span class="n">ong</span><span class="p">()</span><span class="o">.</span><span class="n">transfer_from</span><span class="p">(</span><span class="n">spender</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">acct1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+</code></pre>
+<p>Transfers value amount of tokens from address owner to address to_address.</p>
+
+<aside class="success">
+If this function is called successfully, it  <strong>MUST</strong> fire the Transfer event.
 </aside>
 <h2 id='ont-id'>ONT ID</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -982,11 +1122,9 @@ If this function is called again it overwrites the current allowance with amount
 <h3 id='allowance'>allowance</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
-<span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
-<span class="n">oep4</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">neo_vm</span><span class="o">.</span><span class="n">oep4</span><span class="p">(</span><span class="n">contract_address</span><span class="p">)</span>
-<span class="n">owner</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">owner</span> <span class="o">=</span> <span class="s">'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'</span>
 <span class="n">spender</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
-<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">oep4</span><span class="o">.</span><span class="n">approve</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+<span class="n">tx_hash</span> <span class="o">=</span> <span class="n">oep4</span><span class="o">.</span><span class="n">allowance</span><span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">spender</span><span class="p">)</span>
 </code></pre>
 <p>Returns the amount which spender is still allowed to withdraw from owner.</p>
 <h3 id='transfer-from'>transfer from</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
@@ -994,6 +1132,7 @@ If this function is called again it overwrites the current allowance with amount
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">contract_address</span> <span class="o">=</span> <span class="s">'1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'</span>
 <span class="n">oep4</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">neo_vm</span><span class="o">.</span><span class="n">oep4</span><span class="p">(</span><span class="n">contract_address</span><span class="p">)</span>
+<span class="n">spender</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
 <span class="n">owner</span> <span class="o">=</span> <span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
 <span class="n">to_address</span> <span class="o">=</span> <span class="n">spender</span><span class="o">.</span><span class="n">get_address_base58</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="n">oep4</span><span class="o">.</span><span class="n">transfer_from</span><span class="p">(</span><span class="n">spender</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">acct1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
