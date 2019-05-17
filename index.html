@@ -235,6 +235,9 @@
                               <a href="#get-version" class="toc-h3 toc-link" data-title="get version">get version</a>
                             </li>
                             <li>
+                              <a href="#get-networkid" class="toc-h3 toc-link" data-title="get networkid">get networkid</a>
+                            </li>
+                            <li>
                               <a href="#get-merkle-proof" class="toc-h3 toc-link" data-title="get merkle proof">get merkle proof</a>
                             </li>
                         </ul>
@@ -244,6 +247,9 @@
                         <ul class="toc-list-h3">
                             <li>
                               <a href="#get-version" class="toc-h3 toc-link" data-title="get version">get version</a>
+                            </li>
+                            <li>
+                              <a href="#get-networkid" class="toc-h3 toc-link" data-title="get networkid">get networkid</a>
                             </li>
                             <li>
                               <a href="#get-merkle-proof" class="toc-h3 toc-link" data-title="get merkle proof">get merkle proof</a>
@@ -257,6 +263,9 @@
                               <a href="#get-version" class="toc-h3 toc-link" data-title="get version">get version</a>
                             </li>
                             <li>
+                              <a href="#get-networkid" class="toc-h3 toc-link" data-title="get networkid">get networkid</a>
+                            </li>
+                            <li>
                               <a href="#get-merkle-proof" class="toc-h3 toc-link" data-title="get merkle proof">get merkle proof</a>
                             </li>
                         </ul>
@@ -268,6 +277,9 @@
                               <a href="#get-version" class="toc-h3 toc-link" data-title="get version">get version</a>
                             </li>
                             <li>
+                              <a href="#get-networkid" class="toc-h3 toc-link" data-title="get networkid">get networkid</a>
+                            </li>
+                            <li>
                               <a href="#get-merkle-proof" class="toc-h3 toc-link" data-title="get merkle proof">get merkle proof</a>
                             </li>
                         </ul>
@@ -277,6 +289,9 @@
                         <ul class="toc-list-h3">
                             <li>
                               <a href="#get-version" class="toc-h3 toc-link" data-title="get version">get version</a>
+                            </li>
+                            <li>
+                              <a href="#get-networkid" class="toc-h3 toc-link" data-title="get networkid">get networkid</a>
                             </li>
                             <li>
                               <a href="#get-merkle-proof" class="toc-h3 toc-link" data-title="get merkle proof">get merkle proof</a>
@@ -620,13 +635,37 @@
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_version</span><span class="p">()</span>
-</code></pre><h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+</code></pre>
+<p>Gets the current node version synchronously.</p>
+<h3 id='get-networkid'>get networkid</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
+</code></pre>
+<p>Gets the current network ID synchronously.</p>
+
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
+<h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="s">'12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'</span>
 <span class="n">merkle_proof</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_merkle_proof</span><span class="p">(</span><span class="n">tx_hash</span><span class="p">)</span>
 </code></pre>
+<p>Gets merkle proof of specific transaction synchronously.</p>
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
+
 <p><img src="images/merkle-tree.png" alt="Merkle tree" /></p>
 <h2 id='restful'>RESTful</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -649,13 +688,28 @@
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">get_version</span><span class="p">()</span>
-</code></pre><h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+</code></pre>
+<p>Gets the current node version synchronously.</p>
+<h3 id='get-networkid'>get networkid</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
+</code></pre>
+<p>Gets the current network ID synchronously.</p>
+<h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="s">'12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'</span>
 <span class="n">merkle_proof</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">get_merkle_proof</span><span class="p">(</span><span class="n">tx_hash</span><span class="p">)</span>
 </code></pre>
+<p>Gets merkle proof of specific transaction synchronously.</p>
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
+
 <p><img src="images/merkle-tree.png" alt="Merkle tree" /></p>
 <h2 id='websocket'>WebSocket</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -678,13 +732,28 @@
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">get_version</span><span class="p">()</span>
-</code></pre><h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+</code></pre>
+<p>Gets the current node version asynchronously.</p>
+<h3 id='get-networkid'>get networkid</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
+</code></pre>
+<p>Gets the current network ID asynchronously.</p>
+<h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="s">'12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'</span>
 <span class="n">merkle_proof</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">get_merkle_proof</span><span class="p">(</span><span class="n">tx_hash</span><span class="p">)</span>
 </code></pre>
+<p>Gets merkle proof of specific transaction asynchronously.</p>
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
+
 <p><img src="images/merkle-tree.png" alt="Merkle tree" /></p>
 <h2 id='async-rpc'>Async RPC</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -706,13 +775,28 @@
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">get_version</span><span class="p">()</span>
-</code></pre><h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+</code></pre>
+<p>Gets the current node version asynchronously.</p>
+<h3 id='get-networkid'>get networkid</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
+</code></pre>
+<p>Gets the current network ID asynchronously.</p>
+<h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="s">'12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'</span>
 <span class="n">merkle_proof</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">get_merkle_proof</span><span class="p">(</span><span class="n">tx_hash</span><span class="p">)</span>
 </code></pre>
+<p>Gets merkle proof of specific transaction asynchronously.</p>
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
+
 <p><img src="images/merkle-tree.png" alt="Merkle tree" /></p>
 <h2 id='async-restful'>Async RESTful</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -734,13 +818,26 @@
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">get_version</span><span class="p">()</span>
-</code></pre><h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+</code></pre><h3 id='get-networkid'>get networkid</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
+
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
+</code></pre>
+<p>Gets the current network ID asynchronously.</p>
+<h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
 <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">tx_hash</span> <span class="o">=</span> <span class="s">'12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'</span>
 <span class="n">merkle_proof</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">get_merkle_proof</span><span class="p">(</span><span class="n">tx_hash</span><span class="p">)</span>
 </code></pre>
+<p>Gets merkle proof of specific transaction asynchronously.</p>
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
+
 <p><img src="images/merkle-tree.png" alt="Merkle tree" /></p>
 <h1 id='account'>Account</h1><h2 id='get-address'>get address</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.utils</span> <span class="kn">import</span> <span class="n">utils</span>
 <span class="kn">from</span> <span class="nn">ontology.account.account</span> <span class="kn">import</span> <span class="n">Account</span>
