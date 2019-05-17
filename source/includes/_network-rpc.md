@@ -63,8 +63,8 @@ merkle_proof = sdk.rpc.get_merkle_proof(tx_hash)
 
 Gets merkle proof of specific transaction synchronously.
 
+![](merkle-tree.png)
+
 <aside class="success">
 The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
 </aside>
-
-![](merkle-tree.png)
