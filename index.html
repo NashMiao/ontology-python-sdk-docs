@@ -697,6 +697,15 @@ The merkle root is one component of the block header, so in effect the merkle ro
 <span class="n">version</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">restful</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
 </code></pre>
 <p>Gets the current network ID synchronously.</p>
+
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
 <h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
@@ -741,6 +750,15 @@ The merkle root is one component of the block header, so in effect the merkle ro
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">websocket</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
 </code></pre>
 <p>Gets the current network ID asynchronously.</p>
+
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
 <h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
@@ -783,6 +801,15 @@ The merkle root is one component of the block header, so in effect the merkle ro
 <span class="n">sdk</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">connect_to_test_net</span><span class="p">()</span>
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_rpc</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
 </code></pre>
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
+
 <p>Gets the current network ID asynchronously.</p>
 <h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
@@ -825,6 +852,15 @@ The merkle root is one component of the block header, so in effect the merkle ro
 <span class="n">version</span> <span class="o">=</span> <span class="n">await</span> <span class="n">sdk</span><span class="o">.</span><span class="n">aio_restful</span><span class="o">.</span><span class="n">get_network_id</span><span class="p">()</span>
 </code></pre>
 <p>Gets the current network ID asynchronously.</p>
+
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
 <h3 id='get-merkle-proof'>get merkle proof</h3><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.ont_sdk</span> <span class="kn">import</span> <span class="n">OntologySdk</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">OntologySdk</span><span class="p">()</span>
