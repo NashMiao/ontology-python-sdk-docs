@@ -27,6 +27,29 @@ sdk.rpc.connect_to_test_net()
 version = sdk.rpc.get_version()
 ```
 
+Gets the current node version synchronously.
+
+### get networkid
+
+```python
+from ontology.ont_sdk import OntologySdk
+
+sdk = OntologySdk()
+sdk.rpc.connect_to_test_net()
+version = sdk.rpc.get_network_id()
+```
+
+Gets the current network ID synchronously.
+
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
+
 ### get merkle proof
 
 ```python
@@ -37,5 +60,11 @@ sdk.rpc.connect_to_test_net()
 tx_hash = '12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'
 merkle_proof = sdk.rpc.get_merkle_proof(tx_hash)
 ```
+
+Gets merkle proof of specific transaction synchronously.
+
+<aside class="success">
+The merkle root is one component of the block header, so in effect the merkle root is a cryptographic commitment to the transactions included in the block.
+</aside>
 
 ![](merkle-tree.png)
