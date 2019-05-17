@@ -41,6 +41,15 @@ version = await sdk.websocket.get_network_id()
 
 Gets the current network ID asynchronously.
 
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
+
 ### get merkle proof
 
 ```python

@@ -38,6 +38,15 @@ sdk.rpc.connect_to_test_net()
 version = await sdk.aio_rpc.get_network_id()
 ```
 
+<aside class="success">
+Nodes with same networkid can join to a network.
+<ul>
+<li>0: Main Ontology Network.</li>
+<li>1: Polaris Test Network.</li>
+<li>0: Solo Test Network.</li>
+</ul>
+</aside>
+
 Gets the current network ID asynchronously.
 
 ### get merkle proof
