@@ -24,6 +24,8 @@ includes:
 - native-contract-ont
 - native-contract-ong
 - native-contract-ontid
+- native-contract-aio-ont
+- native-contract-aio-ong
 - neo-contract
 - neo-contract-oep4
 - neo-contract-oep5
