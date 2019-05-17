@@ -26,6 +26,7 @@ includes:
 - native-contract-ontid
 - native-contract-aio-ont
 - native-contract-aio-ong
+- native-contract-aio-ontid
 - neo-contract
 - neo-contract-oep4
 - neo-contract-oep5
@@ -47,6 +48,9 @@ search: true
 [![pypi-v](https://img.shields.io/pypi/v/ontology-python-sdk.svg)](https://pypi.org/project/ontology-python-sdk/)
 
 The Ontology official Python SDK is a comprehensive SDK which is based on `Python3.6`. Currently, it supports local wallet management, digital identity management, digital asset management, deployment and invoke for smart contract, the calling of OEP4, and communication with the Ontology blockchain. The future will also support more functions and applications.
+
+
+The web3.js library is a collection of modules which contain specific functionality for the Ethereum ecosystem.
 
 # Getting Started
 
