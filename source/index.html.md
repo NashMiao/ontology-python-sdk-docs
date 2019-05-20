@@ -47,6 +47,7 @@ search: true
 [![pypi-w](https://img.shields.io/pypi/wheel/ontology-python-sdk.svg)](https://pypi.org/project/ontology-python-sdk/)
 [![pypi-pyversions](https://img.shields.io/pypi/pyversions/ontology-python-sdk.svg)](https://pypi.org/project/ontology-python-sdk/)
 [![pypi-v](https://img.shields.io/pypi/v/ontology-python-sdk.svg)](https://pypi.org/project/ontology-python-sdk/)
+[![Downloads](https://pepy.tech/badge/ontology-python-sdk)](https://pepy.tech/project/ontology-python-sdk)
 
 The ontology-python-sdk is the official Python implementation of the Ontology SDK which contain specific functionality for the Ontology ecosystem.
 
