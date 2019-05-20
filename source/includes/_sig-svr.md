@@ -1,4 +1,4 @@
-## Sig Server
+# Sig Server
 
 <aside class="notice">
 Coming soon.
