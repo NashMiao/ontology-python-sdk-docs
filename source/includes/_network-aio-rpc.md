@@ -1,7 +1,7 @@
 ## Async RPC
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_rpc.connect_to_test_net()
@@ -19,7 +19,7 @@ You can interact with Ontology network by JSON-RPC in asynchronously.
 ### get version
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_rpc.connect_to_test_net()
@@ -31,7 +31,7 @@ Gets the current node version asynchronously.
 ### get networkid
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.rpc.connect_to_test_net()
@@ -52,7 +52,7 @@ Gets the current network ID asynchronously.
 ### get merkle proof
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_rpc.connect_to_test_net()

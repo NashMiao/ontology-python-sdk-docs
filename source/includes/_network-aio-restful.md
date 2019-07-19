@@ -1,7 +1,7 @@
 ## Async RESTful
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_restful.connect_to_test_net()
@@ -19,7 +19,7 @@ You can interact with Ontology network by RESTful in asynchronously.
 ### get version
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_restful.connect_to_test_net()
@@ -29,7 +29,7 @@ version = await sdk.aio_restful.get_version()
 ### get networkid
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.rpc.connect_to_test_net()
@@ -50,7 +50,7 @@ Nodes with same networkid can join to a network.
 ### get merkle proof
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.aio_restful.connect_to_test_net()

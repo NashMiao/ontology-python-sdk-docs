@@ -1,7 +1,7 @@
 ## WebSocket
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.websocket.connect_to_test_net()
@@ -20,7 +20,7 @@ You can interact with Ontology network by `WebSocket`.
 ### get version
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.websocket.connect_to_test_net()
@@ -32,7 +32,7 @@ Gets the current node version asynchronously.
 ### get networkid
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.rpc.connect_to_test_net()
@@ -53,7 +53,7 @@ Nodes with same networkid can join to a network.
 ### get merkle proof
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.websocket.connect_to_test_net()

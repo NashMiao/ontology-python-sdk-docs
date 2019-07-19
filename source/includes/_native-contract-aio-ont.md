@@ -3,7 +3,7 @@
 ```python
 from os import path
 
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 ont = sdk.native_vm.aio_ont()
@@ -18,7 +18,7 @@ Ontology uses a dual token (ONT and ONG) model. ONT is the coin and can be used 
 ### name
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 token_name = await sdk.native_vm.aio_ont().name()
@@ -29,7 +29,7 @@ Returns the name of the token asynchronously.
 ### symbol
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 token_symbol = await sdk.native_vm.aio_ont().symbol()
@@ -40,7 +40,7 @@ Returns the symbol of the token asynchronously.
 ### decimals
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 decimals = await sdk.native_vm.aio_ont().decimals()
@@ -55,7 +55,7 @@ The decimals of ONT is 0, which means to divide the token amount by 1 to get its
 ### balance of
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 balance = await sdk.native_vm.aio_ont().balance_of('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD')
@@ -66,7 +66,7 @@ Returns the account balance of another account with owner address asynchronously
 ### transfer
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 from_acct = sdk.wallet_manager.create_account('password')
@@ -83,7 +83,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 ### approve
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 owner = sdk.wallet_manager.create_account('password')
@@ -104,7 +104,7 @@ If this function is called again it overwrites the current allowance with amount
 ### allowance
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 owner = 'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'
@@ -117,7 +117,7 @@ Returns the amount which spender is still allowed to withdraw from owner.
 ### transfer from
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 spender = sdk.wallet_manager.create_account('password')

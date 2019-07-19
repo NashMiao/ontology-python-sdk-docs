@@ -1,7 +1,7 @@
 ## ONG
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 ong = sdk.native_vm.ong()
@@ -16,7 +16,7 @@ Ontology uses a dual token (ONT and ONG) model. ONG is the utility token used fo
 ### name
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 token_name = sdk.native_vm.ong().name()
@@ -27,7 +27,7 @@ Returns the name of the token synchronously.
 ### symbol
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 token_symbol = sdk.native_vm.ong().symbol()
@@ -38,7 +38,7 @@ Returns the symbol of the token synchronously.
 ### decimals
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 decimals = sdk.native_vm.ong().decimals()
@@ -53,7 +53,7 @@ The decimals of ONG is 9, which means to divide the token amount by 1000000000 t
 ### balance of
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 balance = sdk.native_vm.ong().balance_of('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD')
@@ -64,7 +64,7 @@ Returns the account balance of another account with owner address synchronously.
 ### unbound
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 sdk.rpc.connect_to_test_net()
@@ -81,7 +81,7 @@ Claimable ONG is the amount of ONG you can claim for a 0.01 ONG fee. This balanc
 ### transfer
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 from_acct = sdk.wallet_manager.create_account('password')
@@ -98,7 +98,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 ### approve
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 owner = sdk.wallet_manager.create_account('password')
@@ -119,7 +119,7 @@ If this function is called again it overwrites the current allowance with amount
 ### allowance
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 owner = 'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'
@@ -132,7 +132,7 @@ Returns the amount which spender is still allowed to withdraw from owner.
 ### transfer from
 
 ```python
-from ontology.ont_sdk import OntologySdk
+from ontology.sdk import Ontology
 
 sdk = OntologySdk()
 spender = sdk.wallet_manager.create_account('password')
