@@ -1,0 +1,7 @@
+.PHONY: build
+
+install:
+	bundle install
+
+run:
+	bundle exec middleman server
