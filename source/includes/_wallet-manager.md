@@ -49,7 +49,7 @@ Keystore is password encrypted private key that is in JSON file format, which is
 from ontology.sdk import Ontology
 
 sdk = Ontology()
-wallet = sdk.wallet_manager.create_account('password')
+acct = sdk.wallet_manager.create_account('password')
 ```
 
 <aside class="warning">
@@ -62,7 +62,7 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 from ontology.sdk import Ontology
 
 sdk = Ontology()
-wallet = sdk.wallet_manager.create_identity('password')
+identity = sdk.wallet_manager.create_identity('password')
 ```
 
 <aside class="warning">
