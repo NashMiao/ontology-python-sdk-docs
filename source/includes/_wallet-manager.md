@@ -73,7 +73,6 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 
 ```python
 from os import path
-
 from ontology.sdk import Ontology
 
 sdk = Ontology()
@@ -86,7 +85,6 @@ acct = wallet.get_account_by_b58_address('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD', '
 
 ```python
 from os import path
-
 from ontology.sdk import Ontology
 
 sdk = Ontology()
