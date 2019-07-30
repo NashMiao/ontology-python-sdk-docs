@@ -966,7 +966,6 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 If the password is too easy, it can be easily exploited by brute force attack. We recommend using password of at least 8 characters, preferably more than 12 characters.
 </aside>
 <h2 id='get-account'>get account</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
-
 <span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
@@ -974,7 +973,6 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 <span class="n">wallet</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="p">(</span><span class="n">wallet_path</span><span class="p">)</span>
 <span class="n">acct</span> <span class="o">=</span> <span class="n">wallet</span><span class="o">.</span><span class="n">get_account_by_b58_address</span><span class="p">(</span><span class="s">'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span><span class="p">,</span> <span class="s">'password'</span><span class="p">)</span>
 </code></pre><h2 id='get-identity'>get identity</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
-
 <span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
