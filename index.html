@@ -952,7 +952,7 @@ Keystore is password encrypted private key that is in JSON file format, which is
 <h2 id='create-account'>create account</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
-<span class="n">wallet</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">acct</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_account</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
 </code></pre>
 <aside class="warning">
 If the password is too easy, it can be easily exploited by brute force attack. We recommend using password of at least 8 characters, preferably more than 12 characters.
@@ -960,7 +960,7 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 <h2 id='create-identity'>create identity</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
-<span class="n">wallet</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_identity</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+<span class="n">identity</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_identity</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
 </code></pre>
 <aside class="warning">
 If the password is too easy, it can be easily exploited by brute force attack. We recommend using password of at least 8 characters, preferably more than 12 characters.
