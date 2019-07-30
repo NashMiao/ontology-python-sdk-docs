@@ -3,7 +3,7 @@
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 ont_id = sdk.native_vm.ont_id()
 ```
 
@@ -12,7 +12,7 @@ ont_id = sdk.native_vm.ont_id()
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 ont_id = 'did:ont:APywVQ2UKBtitqqJQ9JrpNeY8VFAnrZXiR'
 pub_keys = sdk.native_vm.ont_id().get_public_keys(ont_id)
 ```
@@ -22,7 +22,7 @@ pub_keys = sdk.native_vm.ont_id().get_public_keys(ont_id)
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 ont = sdk.native_vm.aio_ont()
 ```
 
@@ -31,7 +31,7 @@ ont = sdk.native_vm.aio_ont()
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 ong = sdk.native_vm.aio_ong()
 ```
 
@@ -42,6 +42,6 @@ from os import path
 
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 sdk.native_vm.aio_ont_id()
 ```

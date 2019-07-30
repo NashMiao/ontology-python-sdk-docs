@@ -5,7 +5,7 @@ from os import path
 
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 ont = sdk.native_vm.ont()
 ```
 
@@ -20,7 +20,7 @@ Ontology uses a dual token (ONT and ONG) model. ONT is the coin and can be used 
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 token_name = sdk.native_vm.ont().name()
 ```
 
@@ -31,7 +31,7 @@ Returns the name of the token synchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 token_symbol = sdk.native_vm.ont().symbol()
 ```
 
@@ -42,7 +42,7 @@ Returns the symbol of the token synchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 decimals = sdk.native_vm.ont().decimals()
 ```
 
@@ -57,7 +57,7 @@ The decimals of ONT is 0, which means to divide the token amount by 1 to get its
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 balance = sdk.native_vm.ont().balance_of('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD')
 ```
 
@@ -68,7 +68,7 @@ Returns the account balance of another account with owner address synchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 from_acct = sdk.wallet_manager.create_account('password')
 to_address = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
 tx_hash = sdk.native_vm.ont().transfer(from_acct, to_address, 10, from_acct, 500, 20000)
@@ -85,7 +85,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 owner = sdk.wallet_manager.create_account('password')
 spender = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
 tx_hash = sdk.native_vm.ont().approve(owner, spender, 10, owner, 500, 20000)
@@ -106,7 +106,7 @@ If this function is called again it overwrites the current allowance with amount
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 owner = 'Af1n2cZHhMZumNqKgw9sfCNoTWu9de4NDn'
 spender = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
 tx_hash = sdk.native_vm.ont().allowance(owner, spender)
@@ -119,7 +119,7 @@ Returns the amount which spender is still allowed to withdraw from owner.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 spender = sdk.wallet_manager.create_account('password')
 owner = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
 to_address = spender.get_address_base58()

@@ -3,7 +3,7 @@
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet = sdk.wallet_manager
 ```
 
@@ -20,7 +20,7 @@ from os import path
 
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet_path = path.join(path.curdir, 'wallet.json')
 wallet = sdk.wallet_manager.open_wallet(wallet_path)
 ```
@@ -36,7 +36,7 @@ Keystore is password encrypted private key that is in JSON file format, which is
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet = sdk.wallet_manager.create_account('password')
 ```
 
@@ -49,7 +49,7 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet = sdk.wallet_manager.create_identity('password')
 ```
 
@@ -64,7 +64,7 @@ from os import path
 
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet_path = path.join(path.curdir, 'wallet.json')
 wallet = sdk.wallet_manager(wallet_path)
 acct = wallet.get_account_by_b58_address('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD', 'password')
@@ -77,7 +77,7 @@ from os import path
 
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 wallet_path = path.join(path.curdir, 'wallet.json')
 wallet = sdk.wallet_manager(wallet_path)
 ont_id = 'did:ont:ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'

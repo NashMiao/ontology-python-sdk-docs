@@ -3,7 +3,7 @@
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 sdk.restful.connect_to_test_net()
 sdk.restful.connect_to_main_net()
 sdk.restful.connect_to_localhost()
@@ -22,7 +22,7 @@ You can interact with Ontology network by JSON-RPC in synchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 sdk.restful.connect_to_test_net()
 version = sdk.restful.get_version()
 ```
@@ -34,7 +34,7 @@ Gets the current node version synchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 sdk.rpc.connect_to_test_net()
 version = sdk.restful.get_network_id()
 ```
@@ -55,7 +55,7 @@ Nodes with same networkid can join to a network.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 sdk.restful.connect_to_test_net()
 tx_hash = '12943957b10643f04d89938925306fa342cec9d32925f5bd8e9ea7ce912d16d3'
 merkle_proof = sdk.restful.get_merkle_proof(tx_hash)

@@ -9,7 +9,7 @@ This package has <strong>NOT</strong> been audited and might potentially be unsa
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 token_name = await oep4.name()
@@ -22,7 +22,7 @@ Returns the name of the token asynchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 token_symbol = await oep4.symbol()
@@ -35,7 +35,7 @@ Returns the symbol of the token asynchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 decimals = await oep4.decimals()
@@ -52,7 +52,7 @@ E.g. 9, means to divide the token amount by 1000000000 to get its user represent
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 supply = await oep4.total_supply()
@@ -65,7 +65,7 @@ Returns the total token supply asynchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 balance = await oep4.balance_of('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD')
@@ -78,7 +78,7 @@ Returns the account balance of another account with owner address asynchronously
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 founder = sdk.wallet_manager.create_account('password')
@@ -93,7 +93,7 @@ Contract owner uses this interface to activate oep-4 token asynchronously.
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 from_acct = sdk.wallet_manager.create_account('password')
@@ -112,7 +112,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 to_address = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
@@ -132,7 +132,7 @@ If this function is called successfully, it  <strong>MUST</strong> fire the Tran
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 owner = sdk.wallet_manager.create_account('password')
@@ -155,7 +155,7 @@ If this function is called again it overwrites the current allowance with amount
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 owner = sdk.wallet_manager.create_account('password')
@@ -170,7 +170,7 @@ Returns the amount which spender is still allowed to withdraw from owner asynchr
 ```python
 from ontology.sdk import Ontology
 
-sdk = OntologySdk()
+sdk = Ontology()
 contract_address = '1ddbb682743e9d9e2b71ff419e97a9358c5c4ee9'
 oep4 = sdk.neo_vm.aio_oep4(contract_address)
 owner = 'ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
