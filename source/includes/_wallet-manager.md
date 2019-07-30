@@ -69,7 +69,7 @@ identity = sdk.wallet_manager.create_identity('password')
 If the password is too easy, it can be easily exploited by brute force attack. We recommend using password of at least 8 characters, preferably more than 12 characters.
 </aside>
 
-## get account by address
+## get account
 
 ```python
 from os import path
@@ -82,7 +82,7 @@ wallet = sdk.wallet_manager(wallet_path)
 acct = wallet.get_account_by_b58_address('ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD', 'password')
 ```
 
-## get identity by ont id
+## get identity
 
 ```python
 from os import path
