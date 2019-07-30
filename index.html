@@ -318,6 +318,9 @@
             <a href="#wallet-manager" class="toc-h1 toc-link" data-title="Wallet Manager">Wallet Manager</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#create-wallet" class="toc-h2 toc-link" data-title="create wallet">create wallet</a>
+                  </li>
+                  <li>
                     <a href="#open-wallet" class="toc-h2 toc-link" data-title="open wallet">open wallet</a>
                   </li>
                   <li>
@@ -919,15 +922,22 @@ Coming soon.
 <h1 id='wallet-manager'>Wallet Manager</h1><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
-<span class="n">wallet</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span>
+<span class="n">wm</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span>
 </code></pre>
 <p>This module contains functions to manage Ontology digital accounts and digital identity (named ONT ID) which based on W3c DID protocol specification.</p>
 
 <aside class="warning">
 This package has <strong>NOT</strong> been audited and might potentially be unsafe. Take precautions to clear memory properly, store the private keys safely, and test transaction receiving and sending functionality properly before using in production!
 </aside>
-<h2 id='open-wallet'>open wallet</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<h2 id='create-wallet'>create wallet</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
+<span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
+<span class="n">wallet_path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">curdir</span><span class="p">,</span> <span class="s">'wallet.json'</span><span class="p">)</span>
+<span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="o">.</span><span class="n">create_wallet_file</span><span class="p">(</span><span class="n">wallet_path</span><span class="p">)</span>
+</code></pre>
+<p>This interface helps us to create a wallet&#39;s KeyStore file in specify path.</p>
+<h2 id='open-wallet'>open wallet</h2><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">from</span> <span class="nn">ontology.sdk</span> <span class="kn">import</span> <span class="n">Ontology</span>
 
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
