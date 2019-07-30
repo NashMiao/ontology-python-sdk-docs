@@ -90,8 +90,7 @@ from ontology.sdk import Ontology
 sdk = Ontology()
 wallet_path = path.join(path.curdir, 'wallet.json')
 wallet = sdk.wallet_manager(wallet_path)
-ont_id = 'did:ont:ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'
-identity = wallet_manager.get_identity_by_ont_id(ont_id)
+identity = wallet_manager.get_identity_by_ont_id('did:ont:ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD')
 ```
 
 <aside class="success">
