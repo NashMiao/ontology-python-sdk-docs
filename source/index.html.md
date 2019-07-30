@@ -55,7 +55,7 @@ The ontology-python-sdk is the official Python implementation of the Ontology SD
 # Getting Started
 
 ```bash
-pip install ontology-python-sdk
+pip3 install ontology-python-sdk
 ```
 
 Installation requires a `Python 3.6` or later environment.
