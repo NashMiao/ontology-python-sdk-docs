@@ -4,7 +4,7 @@
 from ontology.sdk import Ontology
 
 sdk = Ontology()
-wallet = sdk.wallet_manager
+wm = sdk.wallet_manager
 ```
 
 This module contains functions to manage Ontology digital accounts and digital identity (named ONT ID) which based on W3c DID protocol specification.
@@ -13,11 +13,23 @@ This module contains functions to manage Ontology digital accounts and digital i
 This package has <strong>NOT</strong> been audited and might potentially be unsafe. Take precautions to clear memory properly, store the private keys safely, and test transaction receiving and sending functionality properly before using in production!
 </aside>
 
+## create wallet
+
+```python
+from os import path
+from ontology.sdk import Ontology
+
+sdk = Ontology()
+wallet_path = path.join(path.curdir, 'wallet.json')
+sdk.wallet_manager.create_wallet_file(wallet_path)
+```
+
+This interface helps us to create a wallet's KeyStore file in specify path.
+
 ## open wallet
 
 ```python
 from os import path
-
 from ontology.sdk import Ontology
 
 sdk = Ontology()
