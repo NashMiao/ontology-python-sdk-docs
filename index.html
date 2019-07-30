@@ -970,8 +970,7 @@ If the password is too easy, it can be easily exploited by brute force attack. W
 <span class="n">sdk</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">()</span>
 <span class="n">wallet_path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">curdir</span><span class="p">,</span> <span class="s">'wallet.json'</span><span class="p">)</span>
 <span class="n">wallet</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">wallet_manager</span><span class="p">(</span><span class="n">wallet_path</span><span class="p">)</span>
-<span class="n">ont_id</span> <span class="o">=</span> <span class="s">'did:ont:ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span>
-<span class="n">identity</span> <span class="o">=</span> <span class="n">wallet_manager</span><span class="o">.</span><span class="n">get_identity_by_ont_id</span><span class="p">(</span><span class="n">ont_id</span><span class="p">)</span>
+<span class="n">identity</span> <span class="o">=</span> <span class="n">wallet_manager</span><span class="o">.</span><span class="n">get_identity_by_ont_id</span><span class="p">(</span><span class="s">'did:ont:ANDfjwrUroaVtvBguDtrWKRMyxFwvVwnZD'</span><span class="p">)</span>
 </code></pre>
 <aside class="success">
 Ontology DID(named ONT ID) is a decentralized identification protocol which based on W3C DID specifications. ONT ID establishes a cryptographically-based digital identity for each entity.
